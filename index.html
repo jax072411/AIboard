@@ -365,7 +365,6 @@
       <div class="agent-status status-dev"><div class="pulse-dot blue"></div> 迭代中 · W22进行中</div>
     </div>
   </div>
-  <input type="file" id="agentIconInput" accept="image/*" style="display:none">
 
   <!-- ===== Gantt Chart ===== -->
   <div class="gantt-wrap" id="ganttChart">
@@ -1280,23 +1279,26 @@ function downloadFile(capId){
 setInterval(loadCapabilities, 30000);
 
 // ===== Agent Icon 自定义图片上传 =====
-const agentIconInput = document.getElementById('agentIconInput');
-let currentAgentIconEl = null;
 function getAgentIcons() { try { return JSON.parse(localStorage.getItem('agent_icons') || '{}'); } catch(e) { return {}; } }
 function saveAgentIcons(icons) { localStorage.setItem('agent_icons', JSON.stringify(icons)); }
-function triggerAgentIconUpload(el) { currentAgentIconEl = el; agentIconInput.value = ''; agentIconInput.click(); }
-agentIconInput.addEventListener('change', function(e) {
-  const file = e.target.files[0]; if (!file || !currentAgentIconEl) return;
-  if (!file.type.startsWith('image/')) return;
-  const agent = currentAgentIconEl.dataset.agent;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    const dataUrl = ev.target.result;
-    const icons = getAgentIcons(); icons[agent] = dataUrl; saveAgentIcons(icons);
-    applyAgentIcon(currentAgentIconEl, agent, dataUrl);
-  };
-  reader.readAsDataURL(file);
-});
+function triggerAgentIconUpload(el) {
+  const input = document.createElement('input');
+  input.type = 'file'; input.accept = 'image/*'; input.style.display = 'none';
+  document.body.appendChild(input);
+  input.addEventListener('change', function(e) {
+    const file = e.target.files[0]; if (!file) { input.remove(); return; }
+    if (!file.type.startsWith('image/')) { input.remove(); return; }
+    const agent = el.dataset.agent;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      const dataUrl = ev.target.result;
+      const icons = getAgentIcons(); icons[agent] = dataUrl; saveAgentIcons(icons);
+      applyAgentIcon(el, agent, dataUrl); input.remove();
+    };
+    reader.readAsDataURL(file);
+  });
+  input.click();
+}
 function applyAgentIcon(iconEl, agent, dataUrl) {
   const existing = iconEl.querySelector('.icon-custom'); if (existing) existing.remove();
   const existingReset = iconEl.querySelector('.icon-reset'); if (existingReset) existingReset.remove();
