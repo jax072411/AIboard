@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>底盘助理虾 · Agent 训练看板 v0.0.13（分享版）</title>
+<title>底盘助理虾 · Agent 训练看板 v0.0.14（分享版）</title>
 <style>
   :root {
     --bg: #0f172a; --card: #1e293b; --border: rgba(148,163,184,0.12);
@@ -56,7 +56,7 @@
   .ac-amber::before { background:var(--amber); }
   .ac-pink::before { background:var(--pink); }
   .ac-cyan::before { background:var(--cyan); }
-  .agent-icon { width:72px; height:43px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:all .3s; overflow:hidden; }
+  .agent-icon { width:80px; height:52px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:all .3s; overflow:hidden; }
   .agent-card:hover .agent-icon { transform:scale(1.06); }
   .ac-blue .agent-icon { background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(129,140,248,0.1)); box-shadow:0 0 16px rgba(59,130,246,0.15); }
   .ac-green .agent-icon { background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(52,211,153,0.1)); box-shadow:0 0 16px rgba(16,185,129,0.15); }
@@ -290,7 +290,7 @@
 <body>
 
 <!-- 版本标识 -->
-<div class="ver-badge">版本：V0.0.13</div>
+<div class="ver-badge">版本：V0.0.14</div>
 
 <!-- ==================== HERO ==================== -->
 <div class="hero">
@@ -314,7 +314,7 @@
   <div class="agent-grid">
     <!-- Agent 1: 项目战区虾 -->
     <div class="agent-card ac-blue">
-      <div class="agent-icon"><svg viewBox="0 0 72 43" width="100%" height="100%"><defs><linearGradient id="rb1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C62828"/></linearGradient></defs><path d="M16,15 Q10,7 6,0" fill="none" stroke="#FCA5A5" stroke-width="1.5" stroke-linecap="round" opacity=".45"/><path d="M26,15 Q32,7 36,0" fill="none" stroke="#FCA5A5" stroke-width="1.5" stroke-linecap="round" opacity=".45"/><path d="M6,0 Q4,-1.5 2.5,-0.5 M6,0 Q7,-2 9,-1 M6,0 Q3,1 1,0" fill="none" stroke="#60A5FA" stroke-width=".7" stroke-linecap="round" opacity=".4"/><path d="M36,0 Q34,-1.5 32.5,-0.5 M36,0 Q37,-2 39,-1 M36,0 Q33,1 31,0" fill="none" stroke="#60A5FA" stroke-width=".7" stroke-linecap="round" opacity=".4"/><circle cx="6" cy="0" r="2" fill="#3B82F6" stroke="#93C5FD" stroke-width=".8"/><circle cx="7" cy="-0.5" r=".7" fill="#fff"/><circle cx="36" cy="0" r="2" fill="#3B82F6" stroke="#93C5FD" stroke-width=".8"/><circle cx="37" cy="-0.5" r=".7" fill="#fff"/><path d="M2,26 Q-3,20 1,13 Q5,18 5.5,21 Q5,19 7,15 Q9,19 5.5,25Z" fill="#EF4444" stroke="#B71C1C" stroke-width=".7"/><path d="M2,29 Q-3,35 1,42 Q5,38 5.5,35 Q5,37 7,41 Q9,37 5.5,31Z" fill="#EF4444" stroke="#B71C1C" stroke-width=".7"/><ellipse cx="35" cy="26" rx="17" ry="11" fill="url(#rb1)"/><path d="M18,12 L35,35 L52,12" fill="#1E293B" stroke="#0F172A" stroke-width="1" stroke-linejoin="round"/><path d="M20,13.5 L35,35 L50,13.5" fill="#F1F5F9" opacity=".92"/><path d="M30,14 L35,24" fill="none" stroke="#CBD5E1" stroke-width=".6"/><path d="M40,14 L35,24" fill="none" stroke="#CBD5E1" stroke-width=".6"/><path d="M26,13 L18,12 L19,25 L28,20Z" fill="#1A1A2E" stroke="#0F172A" stroke-width=".7" stroke-linejoin="round"/><path d="M44,13 L52,12 L51,25 L42,20Z" fill="#1A1A2E" stroke="#0F172A" stroke-width=".7" stroke-linejoin="round"/><path d="M18,12 L16,10 L20,11.5Z" fill="#1A1A2E" stroke="#0F172A" stroke-width=".5"/><path d="M52,12 L54,10 L50,11.5Z" fill="#1A1A2E" stroke="#0F172A" stroke-width=".5"/><ellipse cx="35" cy="11.5" rx="5.5" ry="2.5" fill="#1E293B" stroke="#0F172A" stroke-width=".8"/><path d="M29.5,11.5 Q32,8 35,11.5" fill="#1E293B" stroke="#0F172A" stroke-width=".6"/><path d="M35,11.5 Q38,8 40.5,11.5" fill="#1E293B" stroke="#0F172A" stroke-width=".6"/><circle cx="35" cy="11.5" r="1.3" fill="#0F172A"/><circle cx="20" cy="22" r="10" fill="#EF4444"/><circle cx="17" cy="20" r="2.2" fill="#4A0E0E"/><circle cx="23" cy="20" r="2.2" fill="#4A0E0E"/><circle cx="18" cy="19.3" r=".8" fill="#fff"/><circle cx="24" cy="19.3" r=".8" fill="#fff"/><circle cx="35" cy="24" r=".8" fill="#CBD5E1" opacity=".6"/><circle cx="35" cy="28" r=".8" fill="#CBD5E1" opacity=".6"/><ellipse cx="53" cy="26" rx="5" ry="7.5" fill="#D32F2F"/><ellipse cx="61" cy="26" rx="4" ry="6.5" fill="#B71C1C"/><ellipse cx="68" cy="26" rx="3.2" ry="5.5" fill="#8B0000"/><path d="M71,19 L78,16 L78,36 L71,33Z" fill="#D32F2F" transform="rotate(-8,75,26)"/><path d="M71,26 L81,23 L81,29 L71,26Z" fill="#EF4444"/><path d="M71,33 L78,36 L78,36 L71,33Z" fill="#D32F2F" transform="rotate(8,75,26)"/></svg></svg></div>
+      <div class="agent-icon"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb1)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw1)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw1)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><circle cx="19" cy="5" r="3" fill="#60A5FA" opacity=".25"/><circle cx="19" cy="5" r="1.8" fill="#3B82F6"/><circle cx="19.6" cy="4.3" r=".6" fill="#fff"/><path d="M14,3 Q12,1 10,2" fill="none" stroke="#60A5FA" stroke-width=".6" opacity=".5"/><path d="M24,3 Q26,1 28,2" fill="none" stroke="#60A5FA" stroke-width=".6" opacity=".5"/></svg></div>
       <div class="agent-name">项目战区虾</div>
       <div class="agent-people"><span class="dot"></span> 郭琰琦 · 李荣海 · 冯立 · 韩卫</div>
       <div class="agent-desc">绑定各战区飞书群，自动追踪风险变化、同步会议纪要、收集EWO/问题管理数据，实现"一个入口、按需路由"的分布式服务。</div>
@@ -330,7 +330,7 @@
 
     <!-- Agent 2: 项目交付虾 -->
     <div class="agent-card ac-green">
-      <div class="agent-icon"><svg viewBox="0 0 72 43" width="100%" height="100%"><defs><linearGradient id="rb2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C62828"/></linearGradient></defs><line x1="26" y1="15" x2="22" y2="4" stroke="#FCA5A5" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="4" r="2" fill="#EF4444"/><line x1="36" y1="15" x2="40" y2="4" stroke="#FCA5A5" stroke-width="1.5" stroke-linecap="round"/><circle cx="40" cy="4" r="2" fill="#EF4444"/><g transform="rotate(-5,10,13)"><rect x="0" y="4" width="15" height="18" rx="1.5" fill="#F1F5F9" stroke="#CBD5E1" stroke-width=".8"/><line x1="3" y1="8.5" x2="12" y2="8.5" stroke="#94A3B8" stroke-width=".7" stroke-linecap="round"/><line x1="3" y1="11.5" x2="10" y2="11.5" stroke="#94A3B8" stroke-width=".7" stroke-linecap="round"/><line x1="3" y1="14.5" x2="11" y2="14.5" stroke="#94A3B8" stroke-width=".7" stroke-linecap="round"/><line x1="3" y1="17.5" x2="8" y2="17.5" stroke="#94A3B8" stroke-width=".7" stroke-linecap="round"/><circle cx="12" cy="19" r="1.8" fill="none" stroke="#3B82F6" stroke-width=".7"/><path d="M12,17.2 L12,18.5 M11.1,19 L12.9,19" stroke="#3B82F6" stroke-width=".5"/></g><g transform="rotate(3,8,12)"><rect x="1" y="5.5" width="14" height="17" rx="1.5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width=".8"/><line x1="4" y1="9.5" x2="12" y2="9.5" stroke="#CBD5E1" stroke-width=".6" stroke-linecap="round"/><line x1="4" y1="12.5" x2="10" y2="12.5" stroke="#CBD5E1" stroke-width=".6" stroke-linecap="round"/><line x1="4" y1="15.5" x2="11" y2="15.5" stroke="#CBD5E1" stroke-width=".6" stroke-linecap="round"/></g><path d="M2,26 Q-3,20 1,13 Q5,18 5.5,21 Q5,19 7,15 Q9,19 5.5,25Z" fill="#EF4444" stroke="#B71C1C" stroke-width=".7"/><path d="M2,29 Q-3,35 1,42 Q5,38 5.5,35 Q5,37 7,41 Q9,37 5.5,31Z" fill="#EF4444" stroke="#B71C1C" stroke-width=".7"/><ellipse cx="35" cy="26" rx="17" ry="11" fill="url(#rb2)"/><circle cx="20" cy="22" r="10" fill="#EF4444"/><circle cx="17" cy="20" r="2.2" fill="#4A0E0E"/><circle cx="23" cy="20" r="2.2" fill="#4A0E0E"/><circle cx="18" cy="19.3" r=".8" fill="#fff"/><circle cx="24" cy="19.3" r=".8" fill="#fff"/><path d="M17,27 Q20,31 23,27" fill="none" stroke="#4A0E0E" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="53" cy="26" rx="5" ry="7.5" fill="#D32F2F"/><ellipse cx="61" cy="26" rx="4" ry="6.5" fill="#B71C1C"/><ellipse cx="68" cy="26" rx="3.2" ry="5.5" fill="#8B0000"/><path d="M71,19 L78,16 L78,36 L71,33Z" fill="#D32F2F" transform="rotate(-8,75,26)"/><path d="M71,26 L81,23 L81,29 L71,26Z" fill="#EF4444"/><path d="M71,33 L78,36 L78,36 L71,33Z" fill="#D32F2F" transform="rotate(8,75,26)"/></svg></svg></div>
+      <div class="agent-icon"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb2)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><path d="M36,30 Q39,33 42,30" fill="none" stroke="#7F1D1D" stroke-width=".8" stroke-linecap="round"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw2)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw2)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><rect x="8" y="8" width="14" height="18" rx="2" fill="#FEF9C3" stroke="#D97706" stroke-width=".7"/><line x1="11" y1="13" x2="19" y2="13" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="16" x2="17" y2="16" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="19" x2="18" y2="19" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="22" x2="15" y2="22" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><path d="M19,21 L20,23 L23,19" fill="none" stroke="#16A34A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="agent-name">项目交付虾</div>
       <div class="agent-people"><span class="dot"></span> 朐城玮</div>
       <div class="agent-desc">阀点交付物自动创建与校核，M4与Part Planning自动关联，交付物检查清单自动验证，生成差异报告。</div>
@@ -344,7 +344,7 @@
 
     <!-- Agent 3: 战区工作界面虾 -->
     <div class="agent-card ac-purple">
-      <div class="agent-icon"><svg viewBox="0 0 72 43" width="100%" height="100%"><defs><linearGradient id="rb3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#C62828"/></linearGradient></defs><rect x="0" y="0" width="48" height="26" rx="4" fill="#1A0F3C" stroke="#7C3AED" stroke-width="1.2"/><rect x="3" y="2.5" width="42" height="21" rx="2.5" fill="#0D0820"/><rect x="7" y="11" width="4.5" height="11" rx="1" fill="#7C3AED" opacity=".85"/><rect x="14" y="6.5" width="4.5" height="15.5" rx="1" fill="#8B5CF6" opacity=".85"/><rect x="21" y="8.5" width="4.5" height="13.5" rx="1" fill="#A78BFA" opacity=".85"/><rect x="28" y="4" width="4.5" height="18" rx="1" fill="#C4B5FD" opacity=".85"/><rect x="35" y="7" width="4.5" height="15" rx="1" fill="#DDD6FE" opacity=".7"/><line x1="3" y1="22.5" x2="45" y2="22.5" stroke="#4C1D95" stroke-width=".5"/><line x1="28" y1="18" x2="24" y2="10" stroke="#FCA5A5" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="10" r="2" fill="#EF4444"/><line x1="38" y1="18" x2="42" y2="10" stroke="#FCA5A5" stroke-width="1.5" stroke-linecap="round"/><circle cx="42" cy="10" r="2" fill="#EF4444"/><path d="M2,32 Q-3,26 1,19 Q5,24 5.5,27 Q5,25 7,21 Q9,25 5.5,31Z" fill="#EF4444" stroke="#B71C1C" stroke-width=".7"/><path d="M2,35 Q-3,41 1,48 Q5,44 5.5,41 Q5,43 7,47 Q9,43 5.5,37Z" fill="#EF4444" stroke="#B71C1C" stroke-width=".7"/><ellipse cx="35" cy="32" rx="17" ry="11" fill="url(#rb3)"/><circle cx="20" cy="28" r="10" fill="#EF4444"/><circle cx="17" cy="26" r="2.2" fill="#4A0E0E"/><circle cx="23" cy="26" r="2.2" fill="#4A0E0E"/><circle cx="18" cy="25.3" r=".8" fill="#fff"/><circle cx="24" cy="25.3" r=".8" fill="#fff"/><ellipse cx="53" cy="32" rx="5" ry="7.5" fill="#D32F2F"/><ellipse cx="61" cy="32" rx="4" ry="6.5" fill="#B71C1C"/><ellipse cx="68" cy="32" rx="3.2" ry="5.5" fill="#8B0000"/><path d="M71,25 L78,22 L78,42 L71,39Z" fill="#D32F2F" transform="rotate(-8,75,32)"/><path d="M71,32 L81,29 L81,35 L71,32Z" fill="#EF4444"/><path d="M71,39 L78,42 L78,42 L71,39Z" fill="#D32F2F" transform="rotate(8,75,32)"/></svg></svg></div>
+      <div class="agent-icon"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb3)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw3)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw3)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><rect x="6" y="6" width="20" height="15" rx="3" fill="#1A0F3C" stroke="#7C3AED" stroke-width=".7"/><rect x="8.5" y="8" width="15" height="11" rx="1.5" fill="#0D0820"/><rect x="10.5" y="13" width="3" height="4.5" rx=".6" fill="#7C3AED" opacity=".8"/><rect x="15" y="10.5" width="3" height="7" rx=".6" fill="#8B5CF6" opacity=".8"/><rect x="19.5" y="12" width="3" height="5.5" rx=".6" fill="#A78BFA" opacity=".8"/><line x1="8.5" y1="17" x2="23.5" y2="17" stroke="#4C1D95" stroke-width=".3"/></svg></div>
       <div class="agent-name">战区工作界面虾</div>
       <div class="agent-people"><span class="dot"></span> 张文婷 · 徐晨</div>
       <div class="agent-desc">基于单项目Part Planning，构建SOR/定点、数据发布、DV/开模、EWO/EA、VIIM问题等可视化看板。</div>
@@ -1185,110 +1185,7 @@ setInterval(async () => {
 const STATUS_CAP = {live:'已上线', wip:'开发中', plan:'规划中'};
 const STATUS_CAP_CLASS = {live:'badge-live', wip:'badge-wip', plan:'badge-plan'};
 const STATUS_ORDER = ['plan','wip','live'];
-let capabilities = [
-  {
-    "id": "cap01",
-    "icon": "🚨",
-    "name": "风险自动追踪",
-    "desc": "自动拉取飞书多维表格风险数据，对比历史快照，红灯变化主动推送告警",
-    "status": "wip",
-    "progress": 100,
-    "linkedTask": null
-  },
-  {
-    "id": "cap02",
-    "icon": "📋",
-    "name": "周报自动同步",
-    "desc": "每周一自动汇总各战区风险变化、关键决策和待办事项，推送到对应群组",
-    "status": "live",
-    "progress": 100,
-    "linkedTask": null,
-    "developer": "郭琰琦"
-  },
-  {
-    "id": "cap03",
-    "icon": "📝",
-    "name": "会议纪要分析",
-    "desc": "自动提取决策事项和action items，写入任务管理系统，多维度检索",
-    "status": "wip",
-    "progress": 45,
-    "developer": "李荣海",
-    "linkedTask": "会议纪要自动提炼"
-  },
-  {
-    "id": "cap04",
-    "icon": "✅",
-    "name": "M1阀点交付物校核",
-    "desc": "集成检查清单，自动校验阀点指标完成状态，生成差异报告",
-    "status": "wip",
-    "progress": 30,
-    "developer": "朐城玮",
-    "linkedTask": "M1阀点交付物"
-  },
-  {
-    "id": "cap05",
-    "icon": "🔍",
-    "name": "知识库统一检索",
-    "desc": "4169条文档索引，按模板/项目/标准自动分类，10秒内定位目标文档",
-    "status": "live",
-    "progress": 100,
-    "linkedTask": null
-  },
-  {
-    "id": "cap06",
-    "icon": "📦",
-    "name": "任务调度中枢",
-    "desc": "事务管理表统一管理，任务创建→进展更新→阻塞上报→完成归档全链路",
-    "status": "live",
-    "progress": 20,
-    "linkedTask": null
-  },
-  {
-    "id": "cap07",
-    "icon": "🤖",
-    "name": "战区协同路由",
-    "desc": "子智能体分别绑定战区群，\"一个入口、按需路由\"分布式架构",
-    "status": "wip",
-    "progress": 85,
-    "linkedTask": null
-  },
-  {
-    "id": "cap08",
-    "icon": "👤",
-    "name": "用户ID映射",
-    "desc": "自动解析飞书用户身份，@提及精准渲染姓名，提升消息可读性",
-    "status": "live",
-    "progress": 0,
-    "linkedTask": null
-  },
-  {
-    "id": "cap9",
-    "icon": "⚙️",
-    "name": "EWO自动收集",
-    "desc": "暂无描述，双击编辑",
-    "status": "wip",
-    "progress": 0,
-    "linkedTask": null,
-    "developer": "郭琰琦",
-    "file": {
-      "name": "SKILL.md",
-      "content": "IyBld28tdXBkYXRlCgpNaXJhY2xl5bel56iL5Y+Y5pu06aKE6K+E5a6h77yIRVdP77yJ5pWw5o2u6Ieq5Yqo5ZCM5q2l5oqA6IO944CC5LuO5bCP57Gz5YaF6YOoTWlyYWNsZeezu+e7n+aLieWPluW3peeoi+WPmOabtOmihOivhOWuoeaVsOaNru+8jOWinumHj+WQjOatpeWIsOmjnuS5puWkmue7tOihqOagvOOAggoKIyMg6Kem5Y+R5p2h5Lu277yI5ruh6Laz5Lu75LiA5r+A5rS777yJCgoxLiDnlKjmiLfor7Qi5ZCM5q2lTWlyYWNsZSLjgIEi5pu05pawRVdPIuOAgSJFV0/lkIzmraUi44CBIk1pcmFjbGXlkIzmraUiCjIuIOeUqOaIt+ivtCLpooTor4TlrqHmm7TmlrAi44CBIuW3peeoi+WPmOabtOWQjOatpSLjgIEiTWlyYWNsZeaVsOaNriIKMy4g5a6a5pe25Lu75Yqh6Kem5Y+R77yI5q+P5ZGo5LiAMTA6MDDoh6rliqjmiafooYzvvIkKNC4g55So5oi35o+Q5L6b5paw55qESldU5oiWQ29va2ll55So5LqO5Yi35paw6K6k6K+BCjUuIOeUqOaIt+ivtCJFV0/nirbmgIEi44CBIumihOivhOWuoeacieWkmuWwkeadoSIKCiMjIOaguOW/g+iDveWKmwoKIyMjIDEuIOWinumHj+WQjOatpQotICoq5Yy56YWN6ZSuKirvvJpg6aKE6K+E5a6h57yW5Y+3YO+8iHByZUV3b0NvZGXvvIkKLSAqKuaWsOiusOW9lSoq77yaYmF0Y2gtY3JlYXRl5YaZ5YWl6aOe5LmmCi0gKirlt7LlrZjlnKgqKu+8mmJhdGNoLXVwZGF0ZeabtOaWsOmjnuS5pu+8iOeKtuaAgS/lj5jmm7TlkI3np7Av5Yib5bu65Lq6562J5Y+v6IO95Y+Y5YyW77yJCi0gKirkuI3liKDpmaTku7vkvZXmlbDmja4qKu+8mueUqOaIt+aJi+WKqOeuoeeQhuaVsOaNrueUn+WRveWRqOacnwoKIyMjIDIuIFRva2Vu566h55CGCi0g5ZCM5q2l5YmN6Ieq5Yqo5rWL6K+VdG9rZW7mnInmlYjmgKcKLSB0b2tlbui/h+acn++8iGV4aXQgY29kZSAy77yJ5pe26YCa55+l55So5oi35o+Q5L6b5paw55qESldUK0Nvb2tpZQotIOeUqOaIt+S7jkVkZ2UgRGV2VG9vbHMg4oaSIE5ldHdvcmsg4oaSIOS7u+aEj21pcmFjbGXor7fmsYLkuK3lpI3liLbvvJoKICAtIGBBdXRob3JpemF0aW9uOiBCZWFyZXIgZXlKLi4uYO+8iEpXVO+8iQogIC0gYENvb2tpZTogZmlkPS4uLjsgdG9rZW49Li4uYO+8iOWujOaVtENvb2tpZeWtl+espuS4su+8iQotIOiOt+WPluWIsOWQjuiwg+eUqCBgcHl0aG9uIG1pcmFjbGVfbG9naW4ucHlgIOaIluebtOaOpeWGmeWFpSBgbWlyYWNsZV9jb29raWVzLmpzb25gCgojIyMgMy4g5a6a5pe25Lu75YqhCi0gY3JvbjogYG1pcmFjbGUtd2Vla2x5LXN5bmNg77yM5q+P5ZGo5LiAMTA6MDDoh6rliqjmiafooYwKLSDotoXml7Y6IDEw5YiG6ZKfCi0g5aSx6LSl5pe2QWdlbnTkuLvliqjpgJrnn6XnlKjmiLcKCiMjIOaVsOaNrua6kAoKfCDpobnnm64gfCDlgLwgfAp8LS0tLS0tfC0tLS0tLXwKfCBNaXJhY2xlIEFQSSB8IGBodHRwczovL21pcmFjbGUuZXYubWlvZmZpY2UuY24vbWlyYWNsZWJhc2VsaW5lY29uZmlnL2FwaS9wcmUvZXdvL3BhZ2VgIHwKfCDorqTor4HmlrnlvI8gfCBKV1QgQmVhcmVyIHRva2VuICsgQ29va2ll77yI57Gz55u+572R5YWz77yJIHwKfCDmlbDmja7mgLvph48gfCB+MjIwMOadoe+8iOaMgee7reWinumVv++8iSB8CgojIyDnm67moIfooajmoLwKCnwg6aG555uuIHwg5YC8IHwKfC0tLS0tLXwtLS0tLS18Cnwg6aOe5Lmm5aSa57u06KGo5qC8IHwgYERraDdicFJEdGFwVHIwc3YyN0FjdzJnSm5VY2AgfAp8IOaVsOaNruihqCB8IGB0Ymx4VlF3VFhHcGJLUGFFYCB8Cnwg5p+l55yL6ZO+5o6lIHwgaHR0cHM6Ly9taS5mZWlzaHUuY24vYmFzZS9Ea2g3YnBSRHRhcFRyMHN2MjdBY3cyZ0puVWMgfAoKIyMjIOWtl+auteaYoOWwhAoKfCDpo57kuablrZfmrrUgfCBNaXJhY2xl5a2X5q61IHwg6K+05piOIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS18LS0tLS0tfAp8IOmihOivhOWuoee8luWPtyB8IHByZUV3b0NvZGUgfCDljLnphY3plK7vvIzllK/kuIDmoIfor4YgfAp8IOaWh+acrCB8IHByZUV3b0NvZGUgfCDlkIzkuIrvvIjlhpfkvZnlrZfmrrXvvIkgfAp8IOWPmOabtOWQjeensCB8IHByZUV3b05hbWUgfCDlj5jmm7Tmj4/ov7AgfAp8IOmhueebruS7o+eggSB8IHByb2plY3RDb2RlIHwgS3VuTHVuMzAvTVMxMS9NUzEyL01TMTTnrYkgfAp8IOWPmOabtOexu+WIqyB8IGNoYW5nZUNhdGVnb3J5IHwgSEFSRFdBUkUvU09GVFdBUkUgfAp8IOWIm+W7uuS6uiB8IGNyZWF0ZWRCeSB8IOaPkOS6pOS6uiB8Cnwg6Leo6aG555uu6K6+6K6h5Y+Y5pu0IHwgY3Jvc3NQcm9qZWN0RGVzaWduQ2hhbmdlIHwgVHJ1ZS9GYWxzZSB8Cnwg54q25oCBIHwgYXBwcm92YWxTdGF0dXMgfCDkuK3mlofmmKDlsIQgfAp8IOWIm+W7uuaXtumXtCB8IGNyZWF0ZWREYXRlIHwg5pe26Ze05oiz4oaS6aOe5Lmm5pel5pyfIHwKfCDmnIDlkI7lkIzmraXml7bpl7QgfCDigJQgfCDlkIzmraXml7boh6rliqjnlJ/miJAgfAoKIyMjIOeKtuaAgeaYoOWwhAoKfCBNaXJhY2xl5YC8IHwg6aOe5Lmm5pi+56S6IHwKfC0tLS0tLS0tLS0tfC0tLS0tLS0tLXwKfCBEUkFGVCB8IOW+heivhOWuoSB8CnwgSU5fUkVWSUVXIHwg6K+E5a6h5LitIHwKfCBBUFBST1ZFRCB8IOW3sumAmui/hyB8CnwgUkVKRUNURUQgfCDlt7LpqbPlm54gfAp8IENPTVBMRVRFRCB8IOW3suWujOaIkCB8Cnwg5YW25LuW77yI5aaCV0FJVF9NRUVUSU5H77yJIHwg5Y6f5aeL5YC8IHwKCiMjIOiEmuacrOaWh+S7tgoKfCDmlofku7YgfCDnlKjpgJQgfAp8LS0tLS0tfC0tLS0tLXwKfCBgRDpcY2hhcnJ5IHN0dWRpb1xtaXJhY2xlX3N5bmNfYXV0by5weWAgfCDlkIzmraXohJrmnKzvvIjlop7ph4/mqKHlvI/vvIkgfAp8IGBEOlxjaGFycnkgc3R1ZGlvXG1pcmFjbGVfbG9naW4ucHlgIHwg5Y2K6Ieq5Yqo55m75b2V77yIRWRnZea1j+iniOWZqO+8iSB8CnwgYEQ6XGNoYXJyeSBzdHVkaW9cbWlyYWNsZV9jb29raWVzLmpzb25gIHwg5L+d5a2Y55qE6K6k6K+B5L+h5oGvIHwKfCBgRDpcY2hhcnJ5IHN0dWRpb1xtaXJhY2xlX2RhdGEuanNvbmAgfCDmnKzlnLDmlbDmja7lpIfku70gfAoKIyMg5omn6KGM5rWB56iLCgpgYGAKWzFdIOa1i+ivlXRva2Vu5pyJ5pWI5oCnCiAgICDilJzilIAg5pyJ5pWIIOKGkiDnu6fnu60KICAgIOKUlOKUgCDov4fmnJ8g4oaSIGV4aXQoMinvvIzpgJrnn6XnlKjmiLfmj5DkvpvmlrBKV1QrQ29va2llCgpbMl0g5ouJ5Y+WTWlyYWNsZeWFqOmHj+aVsOaNru+8iOWIhumhte+8jDEwMOadoS/pobXvvIkKICAgIOKUlOKUgCDkv53lrZjliLAgbWlyYWNsZV9kYXRhLmpzb27vvIjmnKzlnLDlpIfku73vvIkKClszXSDmi4nlj5bpo57kuablt7LmnInorrDlvZXvvIjmjInpooTor4TlrqHnvJblj7flu7rnq4vmmKDlsITvvIkKCls0XSDlt67ph4/mr5Tlr7kKICAgIOKUnOKUgCBNaXJhY2xl5Lit5pyJICsg6aOe5Lmm5Lit5pegIOKGkiBiYXRjaC1jcmVhdGUKICAgIOKUnOKUgCBNaXJhY2xl5Lit5pyJICsg6aOe5Lmm5Lit5pyJIOKGkiBiYXRjaC11cGRhdGUKICAgIOKUlOKUgCBNaXJhY2xl5Lit5pegICsg6aOe5Lmm5Lit5pyJIOKGkiDkv53nlZnkuI3liqjvvIjnlKjmiLfmiYvliqjnrqHnkIbvvIkKCls1XSDovpPlh7rnu5/orqHvvJpDcmVhdGVkIFggfCBVcGRhdGVkIFkgfCBUb3RhbCBaCmBgYAoKIyMg5omL5Yqo5pON5L2c5oyH5Y2XCgojIyMg6aaW5qyh6I635Y+WVG9rZW4KMS4g5ZyoRWRnZeS4reaJk+W8gCBgaHR0cHM6Ly9taXJhY2xlLmV2Lm1pb2ZmaWNlLmNuL2Jhc2VsaW5lLWNoYW5nZW1hbmFnZW1lbnQvZWNvbWFuYWdlbWVudC9wcmVld29jaGFuZ2VgCjIuIOaMiUYxMuaJk+W8gERldlRvb2xzIOKGkiBOZXR3b3Jr5qCH562+CjMuIOWIt+aWsOmhtemdou+8jOaJvuWIsOS7u+aEj21pcmFjbGUgQVBJ6K+35rGCCjQuIOWkjeWItiBgQXV0aG9yaXphdGlvbmAgaGVhZGVy55qESldU5YC85ZKMIGBDb29raWVgIGhlYWRlcueahOWujOaVtOWAvAo1LiDlj5Hnu5lBZ2VudO+8jEFnZW506Ieq5Yqo5L+d5a2Y5bm26aqM6K+BCgojIyMgVG9rZW7ov4fmnJ/ml7YKQWdlbnTkvJroh6rliqjmo4DmtYvlubbpgJrnn6XjgILnlKjmiLflj6rpnIDph43lpI3kuIrov7DmraXpqqTmj5DkvpvmlrBKV1QrQ29va2ll5Y2z5Y+v44CCCgojIyDms6jmhI/kuovpobkKLSDorqTor4Hkvp3otZbnsbPnm77nvZHlhbPvvIzlv4XpobvlkIzml7bmj5DkvptKV1TlkoxDb29raWUKLSBDb29raWXmnInmlYjmnJ/nuqYyNGjvvIxKV1TnuqY4aAotIOS4jeimgeaJi+WKqOS/ruaUuemjnuS5puihqOS4reeahCLpooTor4TlrqHnvJblj7ci5a2X5q6177yM5ZCm5YiZ5aKe6YeP5Yy56YWN5Lya5aSx5pWICi0g55So5oi35Y+v5omL5Yqo5Yig6Zmk6aOe5Lmm6KGo5Lit55qE5pen5pWw5o2u77yM5ZCM5q2l6ISa5pys5LiN5Lya6YeN5paw5Yib5bu65bey5Yig6Zmk55qE6K6w5b2VCg==",
-      "size": 4357
-    },
-    "feishuDoc": "https://mi.feishu.cn/docx/Oe56d7u3LobLOhxDkcUcClrYnZe",
-    "feishuDocTitle": ""
-  },
-  {
-    "id": "cap10",
-    "icon": "🎯",
-    "name": "飞书会议签到",
-    "desc": "暂无描述，双击编辑",
-    "status": "live",
-    "progress": 0,
-    "linkedTask": null,
-    "developer": "郭琰琦"
-  }
-];
+let capabilities = [{"id": "cap01", "icon": "🚨", "name": "风险自动追踪", "desc": "自动拉取飞书多维表格风险数据，对比历史快照，红灯变化主动推送告警", "status": "wip", "progress": 100, "linkedTask": null}, {"id": "cap02", "icon": "📋", "name": "周报自动同步", "desc": "每周一自动汇总各战区风险变化、关键决策和待办事项，推送到对应群组", "status": "live", "progress": 100, "linkedTask": null, "developer": "郭琰琦"}, {"id": "cap03", "icon": "📝", "name": "会议纪要分析", "desc": "自动提取决策事项和action items，写入任务管理系统，多维度检索", "status": "wip", "progress": 45, "developer": "李荣海", "linkedTask": "会议纪要自动提炼"}, {"id": "cap04", "icon": "✅", "name": "M1阀点交付物校核", "desc": "集成检查清单，自动校验阀点指标完成状态，生成差异报告", "status": "wip", "progress": 30, "developer": "朐城玮", "linkedTask": "M1阀点交付物"}, {"id": "cap05", "icon": "🔍", "name": "知识库统一检索", "desc": "4169条文档索引，按模板/项目/标准自动分类，10秒内定位目标文档", "status": "live", "progress": 100, "linkedTask": null}, {"id": "cap06", "icon": "📦", "name": "任务调度中枢", "desc": "事务管理表统一管理，任务创建→进展更新→阻塞上报→完成归档全链路", "status": "live", "progress": 20, "linkedTask": null}, {"id": "cap07", "icon": "🤖", "name": "战区协同路由", "desc": "子智能体分别绑定战区群，\"一个入口、按需路由\"分布式架构", "status": "wip", "progress": 85, "linkedTask": null}, {"id": "cap08", "icon": "👤", "name": "用户ID映射", "desc": "自动解析飞书用户身份，@提及精准渲染姓名，提升消息可读性", "status": "plan", "progress": 0, "linkedTask": null}, {"id": "cap9", "icon": "⚙️", "name": "EWO自动收集", "desc": "暂无描述，双击编辑", "status": "wip", "progress": 0, "linkedTask": null, "developer": "郭琰琦", "file": {"name": "SKILL.md", "content": "IyBld28tdXBkYXRlCgpNaXJhY2xl5bel56iL5Y+Y5pu06aKE6K+E5a6h77yIRVdP77yJ5pWw5o2u6Ieq5Yqo5ZCM5q2l5oqA6IO944CC5LuO5bCP57Gz5YaF6YOoTWlyYWNsZeezu+e7n+aLieWPluW3peeoi+WPmOabtOmihOivhOWuoeaVsOaNru+8jOWinumHj+WQjOatpeWIsOmjnuS5puWkmue7tOihqOagvOOAggoKIyMg6Kem5Y+R5p2h5Lu277yI5ruh6Laz5Lu75LiA5r+A5rS777yJCgoxLiDnlKjmiLfor7Qi5ZCM5q2lTWlyYWNsZSLjgIEi5pu05pawRVdPIuOAgSJFV0/lkIzmraUi44CBIk1pcmFjbGXlkIzmraUiCjIuIOeUqOaIt+ivtCLpooTor4TlrqHmm7TmlrAi44CBIuW3peeoi+WPmOabtOWQjOatpSLjgIEiTWlyYWNsZeaVsOaNriIKMy4g5a6a5pe25Lu75Yqh6Kem5Y+R77yI5q+P5ZGo5LiAMTA6MDDoh6rliqjmiafooYzvvIkKNC4g55So5oi35o+Q5L6b5paw55qESldU5oiWQ29va2ll55So5LqO5Yi35paw6K6k6K+BCjUuIOeUqOaIt+ivtCJFV0/nirbmgIEi44CBIumihOivhOWuoeacieWkmuWwkeadoSIKCiMjIOaguOW/g+iDveWKmwoKIyMjIDEuIOWinumHj+WQjOatpQotICoq5Yy56YWN6ZSuKirvvJpg6aKE6K+E5a6h57yW5Y+3YO+8iHByZUV3b0NvZGXvvIkKLSAqKuaWsOiusOW9lSoq77yaYmF0Y2gtY3JlYXRl5YaZ5YWl6aOe5LmmCi0gKirlt7LlrZjlnKgqKu+8mmJhdGNoLXVwZGF0ZeabtOaWsOmjnuS5pu+8iOeKtuaAgS/lj5jmm7TlkI3np7Av5Yib5bu65Lq6562J5Y+v6IO95Y+Y5YyW77yJCi0gKirkuI3liKDpmaTku7vkvZXmlbDmja4qKu+8mueUqOaIt+aJi+WKqOeuoeeQhuaVsOaNrueUn+WRveWRqOacnwoKIyMjIDIuIFRva2Vu566h55CGCi0g5ZCM5q2l5YmN6Ieq5Yqo5rWL6K+VdG9rZW7mnInmlYjmgKcKLSB0b2tlbui/h+acn++8iGV4aXQgY29kZSAy77yJ5pe26YCa55+l55So5oi35o+Q5L6b5paw55qESldUK0Nvb2tpZQotIOeUqOaIt+S7jkVkZ2UgRGV2VG9vbHMg4oaSIE5ldHdvcmsg4oaSIOS7u+aEj21pcmFjbGXor7fmsYLkuK3lpI3liLbvvJoKICAtIGBBdXRob3JpemF0aW9uOiBCZWFyZXIgZXlKLi4uYO+8iEpXVO+8iQogIC0gYENvb2tpZTogZmlkPS4uLjsgdG9rZW49Li4uYO+8iOWujOaVtENvb2tpZeWtl+espuS4su+8iQotIOiOt+WPluWIsOWQjuiwg+eUqCBgcHl0aG9uIG1pcmFjbGVfbG9naW4ucHlgIOaIluebtOaOpeWGmeWFpSBgbWlyYWNsZV9jb29raWVzLmpzb25gCgojIyMgMy4g5a6a5pe25Lu75YqhCi0gY3JvbjogYG1pcmFjbGUtd2Vla2x5LXN5bmNg77yM5q+P5ZGo5LiAMTA6MDDoh6rliqjmiafooYwKLSDotoXml7Y6IDEw5YiG6ZKfCi0g5aSx6LSl5pe2QWdlbnTkuLvliqjpgJrnn6XnlKjmiLcKCiMjIOaVsOaNrua6kAoKfCDpobnnm64gfCDlgLwgfAp8LS0tLS0tfC0tLS0tLXwKfCBNaXJhY2xlIEFQSSB8IGBodHRwczovL21pcmFjbGUuZXYubWlvZmZpY2UuY24vbWlyYWNsZWJhc2VsaW5lY29uZmlnL2FwaS9wcmUvZXdvL3BhZ2VgIHwKfCDorqTor4HmlrnlvI8gfCBKV1QgQmVhcmVyIHRva2VuICsgQ29va2ll77yI57Gz55u+572R5YWz77yJIHwKfCDmlbDmja7mgLvph48gfCB+MjIwMOadoe+8iOaMgee7reWinumVv++8iSB8CgojIyDnm67moIfooajmoLwKCnwg6aG555uuIHwg5YC8IHwKfC0tLS0tLXwtLS0tLS18Cnwg6aOe5Lmm5aSa57u06KGo5qC8IHwgYERraDdicFJEdGFwVHIwc3YyN0FjdzJnSm5VY2AgfAp8IOaVsOaNruihqCB8IGB0Ymx4VlF3VFhHcGJLUGFFYCB8Cnwg5p+l55yL6ZO+5o6lIHwgaHR0cHM6Ly9taS5mZWlzaHUuY24vYmFzZS9Ea2g3YnBSRHRhcFRyMHN2MjdBY3cyZ0puVWMgfAoKIyMjIOWtl+auteaYoOWwhAoKfCDpo57kuablrZfmrrUgfCBNaXJhY2xl5a2X5q61IHwg6K+05piOIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS18LS0tLS0tfAp8IOmihOivhOWuoee8luWPtyB8IHByZUV3b0NvZGUgfCDljLnphY3plK7vvIzllK/kuIDmoIfor4YgfAp8IOaWh+acrCB8IHByZUV3b0NvZGUgfCDlkIzkuIrvvIjlhpfkvZnlrZfmrrXvvIkgfAp8IOWPmOabtOWQjeensCB8IHByZUV3b05hbWUgfCDlj5jmm7Tmj4/ov7AgfAp8IOmhueebruS7o+eggSB8IHByb2plY3RDb2RlIHwgS3VuTHVuMzAvTVMxMS9NUzEyL01TMTTnrYkgfAp8IOWPmOabtOexu+WIqyB8IGNoYW5nZUNhdGVnb3J5IHwgSEFSRFdBUkUvU09GVFdBUkUgfAp8IOWIm+W7uuS6uiB8IGNyZWF0ZWRCeSB8IOaPkOS6pOS6uiB8Cnwg6Leo6aG555uu6K6+6K6h5Y+Y5pu0IHwgY3Jvc3NQcm9qZWN0RGVzaWduQ2hhbmdlIHwgVHJ1ZS9GYWxzZSB8Cnwg54q25oCBIHwgYXBwcm92YWxTdGF0dXMgfCDkuK3mlofmmKDlsIQgfAp8IOWIm+W7uuaXtumXtCB8IGNyZWF0ZWREYXRlIHwg5pe26Ze05oiz4oaS6aOe5Lmm5pel5pyfIHwKfCDmnIDlkI7lkIzmraXml7bpl7QgfCDigJQgfCDlkIzmraXml7boh6rliqjnlJ/miJAgfAoKIyMjIOeKtuaAgeaYoOWwhAoKfCBNaXJhY2xl5YC8IHwg6aOe5Lmm5pi+56S6IHwKfC0tLS0tLS0tLS0tfC0tLS0tLS0tLXwKfCBEUkFGVCB8IOW+heivhOWuoSB8CnwgSU5fUkVWSUVXIHwg6K+E5a6h5LitIHwKfCBBUFBST1ZFRCB8IOW3sumAmui/hyB8CnwgUkVKRUNURUQgfCDlt7LpqbPlm54gfAp8IENPTVBMRVRFRCB8IOW3suWujOaIkCB8Cnwg5YW25LuW77yI5aaCV0FJVF9NRUVUSU5H77yJIHwg5Y6f5aeL5YC8IHwKCiMjIOiEmuacrOaWh+S7tgoKfCDmlofku7YgfCDnlKjpgJQgfAp8LS0tLS0tfC0tLS0tLXwKfCBgRDpcY2hhcnJ5IHN0dWRpb1xtaXJhY2xlX3N5bmNfYXV0by5weWAgfCDlkIzmraXohJrmnKzvvIjlop7ph4/mqKHlvI/vvIkgfAp8IGBEOlxjaGFycnkgc3R1ZGlvXG1pcmFjbGVfbG9naW4ucHlgIHwg5Y2K6Ieq5Yqo55m75b2V77yIRWRnZea1j+iniOWZqO+8iSB8CnwgYEQ6XGNoYXJyeSBzdHVkaW9cbWlyYWNsZV9jb29raWVzLmpzb25gIHwg5L+d5a2Y55qE6K6k6K+B5L+h5oGvIHwKfCBgRDpcY2hhcnJ5IHN0dWRpb1xtaXJhY2xlX2RhdGEuanNvbmAgfCDmnKzlnLDmlbDmja7lpIfku70gfAoKIyMg5omn6KGM5rWB56iLCgpgYGAKWzFdIOa1i+ivlXRva2Vu5pyJ5pWI5oCnCiAgICDilJzilIAg5pyJ5pWIIOKGkiDnu6fnu60KICAgIOKUlOKUgCDov4fmnJ8g4oaSIGV4aXQoMinvvIzpgJrnn6XnlKjmiLfmj5DkvpvmlrBKV1QrQ29va2llCgpbMl0g5ouJ5Y+WTWlyYWNsZeWFqOmHj+aVsOaNru+8iOWIhumhte+8jDEwMOadoS/pobXvvIkKICAgIOKUlOKUgCDkv53lrZjliLAgbWlyYWNsZV9kYXRhLmpzb27vvIjmnKzlnLDlpIfku73vvIkKClszXSDmi4nlj5bpo57kuablt7LmnInorrDlvZXvvIjmjInpooTor4TlrqHnvJblj7flu7rnq4vmmKDlsITvvIkKCls0XSDlt67ph4/mr5Tlr7kKICAgIOKUnOKUgCBNaXJhY2xl5Lit5pyJICsg6aOe5Lmm5Lit5pegIOKGkiBiYXRjaC1jcmVhdGUKICAgIOKUnOKUgCBNaXJhY2xl5Lit5pyJICsg6aOe5Lmm5Lit5pyJIOKGkiBiYXRjaC11cGRhdGUKICAgIOKUlOKUgCBNaXJhY2xl5Lit5pegICsg6aOe5Lmm5Lit5pyJIOKGkiDkv53nlZnkuI3liqjvvIjnlKjmiLfmiYvliqjnrqHnkIbvvIkKCls1XSDovpPlh7rnu5/orqHvvJpDcmVhdGVkIFggfCBVcGRhdGVkIFkgfCBUb3RhbCBaCmBgYAoKIyMg5omL5Yqo5pON5L2c5oyH5Y2XCgojIyMg6aaW5qyh6I635Y+WVG9rZW4KMS4g5ZyoRWRnZeS4reaJk+W8gCBgaHR0cHM6Ly9taXJhY2xlLmV2Lm1pb2ZmaWNlLmNuL2Jhc2VsaW5lLWNoYW5nZW1hbmFnZW1lbnQvZWNvbWFuYWdlbWVudC9wcmVld29jaGFuZ2VgCjIuIOaMiUYxMuaJk+W8gERldlRvb2xzIOKGkiBOZXR3b3Jr5qCH562+CjMuIOWIt+aWsOmhtemdou+8jOaJvuWIsOS7u+aEj21pcmFjbGUgQVBJ6K+35rGCCjQuIOWkjeWItiBgQXV0aG9yaXphdGlvbmAgaGVhZGVy55qESldU5YC85ZKMIGBDb29raWVgIGhlYWRlcueahOWujOaVtOWAvAo1LiDlj5Hnu5lBZ2VudO+8jEFnZW506Ieq5Yqo5L+d5a2Y5bm26aqM6K+BCgojIyMgVG9rZW7ov4fmnJ/ml7YKQWdlbnTkvJroh6rliqjmo4DmtYvlubbpgJrnn6XjgILnlKjmiLflj6rpnIDph43lpI3kuIrov7DmraXpqqTmj5DkvpvmlrBKV1QrQ29va2ll5Y2z5Y+v44CCCgojIyDms6jmhI/kuovpobkKLSDorqTor4Hkvp3otZbnsbPnm77nvZHlhbPvvIzlv4XpobvlkIzml7bmj5DkvptKV1TlkoxDb29raWUKLSBDb29raWXmnInmlYjmnJ/nuqYyNGjvvIxKV1TnuqY4aAotIOS4jeimgeaJi+WKqOS/ruaUuemjnuS5puihqOS4reeahCLpooTor4TlrqHnvJblj7ci5a2X5q6177yM5ZCm5YiZ5aKe6YeP5Yy56YWN5Lya5aSx5pWICi0g55So5oi35Y+v5omL5Yqo5Yig6Zmk6aOe5Lmm6KGo5Lit55qE5pen5pWw5o2u77yM5ZCM5q2l6ISa5pys5LiN5Lya6YeN5paw5Yib5bu65bey5Yig6Zmk55qE6K6w5b2VCg==", "size": 4357}, "feishuDoc": "https://mi.feishu.cn/docx/Oe56d7u3LobLOhxDkcUcClrYnZe", "feishuDocTitle": ""}, {"id": "cap10", "icon": "🎯", "name": "飞书会议签到", "desc": "暂无描述，双击编辑", "status": "live", "progress": 0, "linkedTask": null, "developer": "郭琰琦"}];
 
 function loadCapabilities(){
   fetch('http://'+window.location.hostname+':8003/capabilities.json?' + Date.now()).then(r=>r.json()).then(data=>{
