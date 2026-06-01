@@ -56,19 +56,13 @@
   .ac-amber::before { background:var(--amber); }
   .ac-pink::before { background:var(--pink); }
   .ac-cyan::before { background:var(--cyan); }
-  .agent-icon { width:80px; height:107px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:all .3s; overflow:hidden; position:relative; cursor:pointer; }
+  .agent-icon { width:80px; height:107px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:all .3s; overflow:hidden; position:relative; }
   .agent-card:hover .agent-icon { transform:scale(1.06); }
   .ac-blue .agent-icon { background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(129,140,248,0.1)); box-shadow:0 0 16px rgba(59,130,246,0.15); }
   .ac-green .agent-icon { background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(52,211,153,0.1)); box-shadow:0 0 16px rgba(16,185,129,0.15); }
   .ac-purple .agent-icon { background:linear-gradient(135deg,rgba(168,85,247,0.15),rgba(192,132,252,0.1)); box-shadow:0 0 16px rgba(168,85,247,0.15); }
   .agent-icon svg { position:relative; z-index:1; }
   .agent-icon .icon-custom { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:10px; z-index:2; }
-  .agent-icon .icon-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.55); border-radius:10px; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s; z-index:3; pointer-events:none; }
-  .agent-card:hover .agent-icon .icon-overlay { opacity:1; }
-  .agent-icon .icon-overlay span { color:#fff; font-size:10px; font-weight:600; line-height:1.3; text-align:center; }
-  .agent-icon .icon-reset { position:absolute; top:2px; right:2px; width:18px; height:18px; border-radius:50%; background:rgba(239,68,68,0.9); color:#fff; font-size:11px; line-height:18px; text-align:center; cursor:pointer; z-index:4; opacity:0; transition:opacity .2s; border:none; padding:0; }
-  .agent-card:hover .agent-icon .icon-reset { opacity:1; }
-  .agent-icon .icon-reset:hover { background:#DC2626; transform:scale(1.15); }
   .ac-cyan .agent-icon { background:rgba(6,182,212,0.12); color:var(--cyan); }
   .ac-amber .agent-icon { background:rgba(245,158,11,0.12); color:var(--amber); }
   .ac-pink .agent-icon { background:rgba(236,72,153,0.12); color:var(--pink); }
@@ -322,7 +316,7 @@
   <div class="agent-grid">
     <!-- Agent 1: 项目战区虾 -->
     <div class="agent-card ac-blue">
-      <div class="agent-icon" data-agent="blue" onclick="triggerAgentIconUpload(this)"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb1)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw1)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw1)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><circle cx="19" cy="5" r="3" fill="#60A5FA" opacity=".25"/><circle cx="19" cy="5" r="1.8" fill="#3B82F6"/><circle cx="19.6" cy="4.3" r=".6" fill="#fff"/><path d="M14,3 Q12,1 10,2" fill="none" stroke="#60A5FA" stroke-width=".6" opacity=".5"/><path d="M24,3 Q26,1 28,2" fill="none" stroke="#60A5FA" stroke-width=".6" opacity=".5"/></svg><div class="icon-overlay"><span>📷<br>更换图片</span></div></div>
+      <div class="agent-icon"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb1)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw1)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw1)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><circle cx="19" cy="5" r="3" fill="#60A5FA" opacity=".25"/><circle cx="19" cy="5" r="1.8" fill="#3B82F6"/><circle cx="19.6" cy="4.3" r=".6" fill="#fff"/><path d="M14,3 Q12,1 10,2" fill="none" stroke="#60A5FA" stroke-width=".6" opacity=".5"/><path d="M24,3 Q26,1 28,2" fill="none" stroke="#60A5FA" stroke-width=".6" opacity=".5"/></svg></div>
       <div class="agent-name">项目战区虾</div>
       <div class="agent-people"><span class="dot"></span> 郭琰琦 · 李荣海 · 冯立 · 韩卫</div>
       <div class="agent-desc">绑定各战区飞书群，自动追踪风险变化、同步会议纪要、收集EWO/问题管理数据，实现"一个入口、按需路由"的分布式服务。</div>
@@ -338,7 +332,7 @@
 
     <!-- Agent 2: 项目交付虾 -->
     <div class="agent-card ac-green">
-      <div class="agent-icon" data-agent="green" onclick="triggerAgentIconUpload(this)"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb2)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><path d="M36,30 Q39,33 42,30" fill="none" stroke="#7F1D1D" stroke-width=".8" stroke-linecap="round"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw2)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw2)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><rect x="8" y="8" width="14" height="18" rx="2" fill="#FEF9C3" stroke="#D97706" stroke-width=".7"/><line x1="11" y1="13" x2="19" y2="13" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="16" x2="17" y2="16" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="19" x2="18" y2="19" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="22" x2="15" y2="22" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><path d="M19,21 L20,23 L23,19" fill="none" stroke="#16A34A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="icon-overlay"><span>📷<br>更换图片</span></div></div>
+      <div class="agent-icon"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb2)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><path d="M36,30 Q39,33 42,30" fill="none" stroke="#7F1D1D" stroke-width=".8" stroke-linecap="round"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw2)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw2)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><rect x="8" y="8" width="14" height="18" rx="2" fill="#FEF9C3" stroke="#D97706" stroke-width=".7"/><line x1="11" y1="13" x2="19" y2="13" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="16" x2="17" y2="16" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="19" x2="18" y2="19" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><line x1="11" y1="22" x2="15" y2="22" stroke="#92400E" stroke-width=".6" stroke-linecap="round"/><path d="M19,21 L20,23 L23,19" fill="none" stroke="#16A34A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="agent-name">项目交付虾</div>
       <div class="agent-people"><span class="dot"></span> 朐城玮</div>
       <div class="agent-desc">阀点交付物自动创建与校核，M4与Part Planning自动关联，交付物检查清单自动验证，生成差异报告。</div>
@@ -352,7 +346,7 @@
 
     <!-- Agent 3: 战区工作界面虾 -->
     <div class="agent-card ac-purple">
-      <div class="agent-icon" data-agent="purple" onclick="triggerAgentIconUpload(this)"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb3)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw3)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw3)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><rect x="6" y="6" width="20" height="15" rx="3" fill="#1A0F3C" stroke="#7C3AED" stroke-width=".7"/><rect x="8.5" y="8" width="15" height="11" rx="1.5" fill="#0D0820"/><rect x="10.5" y="13" width="3" height="4.5" rx=".6" fill="#7C3AED" opacity=".8"/><rect x="15" y="10.5" width="3" height="7" rx=".6" fill="#8B5CF6" opacity=".8"/><rect x="19.5" y="12" width="3" height="5.5" rx=".6" fill="#A78BFA" opacity=".8"/><line x1="8.5" y1="17" x2="23.5" y2="17" stroke="#4C1D95" stroke-width=".3"/></svg><div class="icon-overlay"><span>📷<br>更换图片</span></div></div>
+      <div class="agent-icon"><svg viewBox="0 0 72 52" width="100%" height="100%"><defs><linearGradient id="rb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient><linearGradient id="claw3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs><ellipse cx="38" cy="30" rx="14" ry="11" fill="url(#rb3)"/><path d="M32,26 L33.5,34 M36,24.5 L37,35 M40,24.5 L40,35 M44,26 L42.5,34" fill="none" stroke="#FCA5A5" stroke-width=".4" opacity=".3"/><circle cx="35" cy="26" r="3" fill="#1E293B"/><circle cx="43" cy="26" r="3" fill="#1E293B"/><circle cx="36" cy="25" r="1.2" fill="#fff"/><circle cx="44" cy="25" r="1.2" fill="#fff"/><ellipse cx="54" cy="30" rx="5.5" ry="4.5" fill="#DC2626"/><ellipse cx="60" cy="30" rx="4" ry="3.5" fill="#B91C1C"/><ellipse cx="65" cy="30" rx="3" ry="2.5" fill="#991B1B"/><path d="M26,22 Q16,12 22,6 Q26,14 28,18 Q27,14 30,8 Q32,14 28,22Z" fill="url(#claw3)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><path d="M26,34 Q16,44 22,50 Q26,42 28,38 Q27,42 30,48 Q32,42 28,34Z" fill="url(#claw3)" stroke="#DC2626" stroke-width=".7" stroke-linejoin="round"/><rect x="6" y="6" width="20" height="15" rx="3" fill="#1A0F3C" stroke="#7C3AED" stroke-width=".7"/><rect x="8.5" y="8" width="15" height="11" rx="1.5" fill="#0D0820"/><rect x="10.5" y="13" width="3" height="4.5" rx=".6" fill="#7C3AED" opacity=".8"/><rect x="15" y="10.5" width="3" height="7" rx=".6" fill="#8B5CF6" opacity=".8"/><rect x="19.5" y="12" width="3" height="5.5" rx=".6" fill="#A78BFA" opacity=".8"/><line x1="8.5" y1="17" x2="23.5" y2="17" stroke="#4C1D95" stroke-width=".3"/></svg></div>
       <div class="agent-name">战区工作界面虾</div>
       <div class="agent-people"><span class="dot"></span> 张文婷 · 徐晨</div>
       <div class="agent-desc">基于单项目Part Planning，构建SOR/定点、数据发布、DV/开模、EWO/EA、VIIM问题等可视化看板。</div>
@@ -1278,56 +1272,20 @@ function downloadFile(capId){
 // 每30秒刷新能力矩阵
 setInterval(loadCapabilities, 30000);
 
-// ===== Agent Icon 自定义图片上传 =====
-function getAgentIcons() { try { return JSON.parse(localStorage.getItem('agent_icons') || '{}'); } catch(e) { return {}; } }
-function saveAgentIcons(icons) { localStorage.setItem('agent_icons', JSON.stringify(icons)); }
-function compressImage(file, maxSize, quality) {
-  return new Promise(function(resolve) {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      var img = new Image();
-      img.onload = function() {
-        var w = img.width, h = img.height;
-        if (w > maxSize || h > maxSize) {
-          var scale = maxSize / Math.max(w, h);
-          w = Math.round(w * scale); h = Math.round(h * scale);
-        }
-        var canvas = document.createElement('canvas');
-        canvas.width = w; canvas.height = h;
-        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-        resolve(canvas.toDataURL('image/jpeg', quality));
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
-function triggerAgentIconUpload(el) {
-  var input = document.createElement('input');
-  input.type = 'file'; input.accept = 'image/*'; input.style.display = 'none';
-  document.body.appendChild(input);
-  input.addEventListener('change', function(e) {
-    var file = e.target.files[0]; if (!file) { input.remove(); return; }
-    if (!file.type.startsWith('image/')) { input.remove(); return; }
-    var agent = el.dataset.agent;
-    compressImage(file, 200, 0.7).then(function(dataUrl) {
-      var icons = getAgentIcons(); icons[agent] = dataUrl; saveAgentIcons(icons);
-      applyAgentIcon(el, agent, dataUrl); input.remove();
-    });
-  });
-  input.click();
-}
-function applyAgentIcon(iconEl, agent, dataUrl) {
-  const existing = iconEl.querySelector('.icon-custom'); if (existing) existing.remove();
-  const existingReset = iconEl.querySelector('.icon-reset'); if (existingReset) existingReset.remove();
-  const img = document.createElement('img'); img.className = 'icon-custom'; img.src = dataUrl; iconEl.appendChild(img);
-  const resetBtn = document.createElement('button'); resetBtn.className = 'icon-reset'; resetBtn.title = '恢复默认Logo'; resetBtn.textContent = '×';
-  resetBtn.onclick = function(e) { e.stopPropagation(); const icons = getAgentIcons(); delete icons[agent]; saveAgentIcons(icons); img.remove(); resetBtn.remove(); };
-  iconEl.appendChild(resetBtn);
-}
+// ===== Agent Icons（只读 · 从开发版同步） =====
+const AGENT_ICONS = {"blue": "data:image/jpeg;base64,/9j/test123", "green": "data:image/jpeg;base64,/9j/test456"};
 function loadAgentIcons() {
-  const icons = getAgentIcons();
-  document.querySelectorAll('.agent-icon[data-agent]').forEach(el => { const agent = el.dataset.agent; if (icons[agent]) applyAgentIcon(el, agent, icons[agent]); });
+  const agentEls = document.querySelectorAll('.agent-icon');
+  const keys = ['blue', 'green', 'purple'];
+  agentEls.forEach((el, i) => {
+    const dataUrl = AGENT_ICONS[keys[i]];
+    if (dataUrl) {
+      const img = document.createElement('img');
+      img.className = 'icon-custom';
+      img.src = dataUrl;
+      el.appendChild(img);
+    }
+  });
 }
 
 // ===== Start =====
