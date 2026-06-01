@@ -1273,7 +1273,7 @@ function downloadFile(capId){
 setInterval(loadCapabilities, 30000);
 
 // ===== Agent Icons（只读 · 从开发版同步） =====
-const AGENT_ICONS = {"blue": "data:image/jpeg;base64,/9j/test123", "green": "data:image/jpeg;base64,/9j/test456"};
+const AGENT_ICONS = {};
 function loadAgentIcons() {
   const agentEls = document.querySelectorAll('.agent-icon');
   const keys = ['blue', 'green', 'purple'];
