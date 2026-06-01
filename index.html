@@ -56,7 +56,7 @@
   .ac-amber::before { background:var(--amber); }
   .ac-pink::before { background:var(--pink); }
   .ac-cyan::before { background:var(--cyan); }
-  .agent-icon { width:80px; height:52px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:all .3s; overflow:hidden; position:relative; cursor:pointer; }
+  .agent-icon { width:80px; height:107px; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:all .3s; overflow:hidden; position:relative; cursor:pointer; }
   .agent-card:hover .agent-icon { transform:scale(1.06); }
   .ac-blue .agent-icon { background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(129,140,248,0.1)); box-shadow:0 0 16px rgba(59,130,246,0.15); }
   .ac-green .agent-icon { background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(52,211,153,0.1)); box-shadow:0 0 16px rgba(16,185,129,0.15); }
@@ -1281,21 +1281,39 @@ setInterval(loadCapabilities, 30000);
 // ===== Agent Icon 自定义图片上传 =====
 function getAgentIcons() { try { return JSON.parse(localStorage.getItem('agent_icons') || '{}'); } catch(e) { return {}; } }
 function saveAgentIcons(icons) { localStorage.setItem('agent_icons', JSON.stringify(icons)); }
+function compressImage(file, maxSize, quality) {
+  return new Promise(function(resolve) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var img = new Image();
+      img.onload = function() {
+        var w = img.width, h = img.height;
+        if (w > maxSize || h > maxSize) {
+          var scale = maxSize / Math.max(w, h);
+          w = Math.round(w * scale); h = Math.round(h * scale);
+        }
+        var canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
 function triggerAgentIconUpload(el) {
-  const input = document.createElement('input');
+  var input = document.createElement('input');
   input.type = 'file'; input.accept = 'image/*'; input.style.display = 'none';
   document.body.appendChild(input);
   input.addEventListener('change', function(e) {
-    const file = e.target.files[0]; if (!file) { input.remove(); return; }
+    var file = e.target.files[0]; if (!file) { input.remove(); return; }
     if (!file.type.startsWith('image/')) { input.remove(); return; }
-    const agent = el.dataset.agent;
-    const reader = new FileReader();
-    reader.onload = function(ev) {
-      const dataUrl = ev.target.result;
-      const icons = getAgentIcons(); icons[agent] = dataUrl; saveAgentIcons(icons);
+    var agent = el.dataset.agent;
+    compressImage(file, 200, 0.7).then(function(dataUrl) {
+      var icons = getAgentIcons(); icons[agent] = dataUrl; saveAgentIcons(icons);
       applyAgentIcon(el, agent, dataUrl); input.remove();
-    };
-    reader.readAsDataURL(file);
+    });
   });
   input.click();
 }
