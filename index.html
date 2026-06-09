@@ -1790,13 +1790,23 @@ function saveCapabilities(){
   } catch(e){}
 }
 
+// ===== 自动计算当前周（根据WEEKS数组的start日期匹配今天） =====
+function autoCalcCurrentWeek(){
+  const now = new Date();
+  const todayStr = String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  for(let i = WEEKS.length - 1; i >= 0; i--){
+    if(todayStr >= WEEKS[i].start){ CURRENT_WEEK = i; return; }
+  }
+  CURRENT_WEEK = 0;
+}
+
 // ===== Init — 始终从JSON文件加载最新数据（JSON是唯一数据源） =====
 async function initGantt(){
   try {
     const resp = await fetch('gantt_tasks.json?' + Date.now());
     const data = await resp.json();
     tasks = data.tasks || [];
-    CURRENT_WEEK = data.currentWeek ?? 2;
+    autoCalcCurrentWeek();
   } catch(e) {
     // JSON加载失败时回退到localStorage
     const saved = localStorage.getItem('gantt_tasks');
@@ -1804,7 +1814,7 @@ async function initGantt(){
       try{
         const data = JSON.parse(saved);
         tasks = data.tasks || [];
-        CURRENT_WEEK = data.currentWeek ?? 2;
+        autoCalcCurrentWeek();
       }catch(e2){ tasks = []; }
     }
   }
